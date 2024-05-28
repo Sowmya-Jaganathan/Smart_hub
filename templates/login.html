@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Classic Login Form Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}"/>
+  <link rel="stylesheet" href="{{url_for('static',filename='js/login.js')}}"/>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class='login' id='login'>
+  <div class='head'>
+  <h1 class='company'>Hello Customer</h1>
+  </div>
+  <p class='msg'>Welcome back</p>
+  <div class='form'>
+    <form action="/lo" method="post">
+  <input type="text" placeholder='Username' class='Username' id='Username'name='Username' required><br>
+  <input type="password" placeholder='••••••••••••••' name="password" class='password'><br>
+  <input type="submit" value="login">
+  <a href="{{url_for('forgot')}}" class='forgot'>Forgot?</a>
+  <a href="{{url_for('sign')}}">don't have an account?</a>
+    </form>
+  </div>
+</section>
+<!-- partial -->
+  <script  src="{{url_for('static',filename='js/login.js')}}"></script>
+
+</body>
+</html>
